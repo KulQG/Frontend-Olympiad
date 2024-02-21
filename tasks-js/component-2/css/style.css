@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b85042;
+  background-color: #e7e8d1;
+}
+
+.slider-containter {
+  margin: 0 auto;
+  position: relative;
+  width: 600px;
+  padding: 30px 90px;
+}
+
+.slider-items {
+  height: 380px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slider-item--current {
+  display: block;
+}
+
+.slider-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slider-toggles {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slider-toggle--prev,
+.slider-toggle--next {
+  position: relative;
+  width: 55px;
+  height: 380px;
+  padding: 0;
+  color: inherit;
+  font-size: 0;
+  line-height: 0;
+  border: 3px solid currentColor;
+  background-color: currentColor;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.387 20.3142L0 20.3142V15.6858L27.387 15.6858L15.318 3.27231L18.4995 0L36 18L18.4995 36L15.318 32.7277L27.387 20.3142Z' fill='%23E7E8D1'/%3E%3C/svg%3E%0A");
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-toggle--prev {
+  transform: rotate(180deg);
+}
+
+.slider-toggle--next:disabled,
+.slider-toggle--prev:disabled {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.387 20.3142L0 20.3142V15.6858L27.387 15.6858L15.318 3.27231L18.4995 0L36 18L18.4995 36L15.318 32.7277L27.387 20.3142Z' fill='%23B85042' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+  cursor: default;
+}
+
+
+/* :disabled
+background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.613 15.6858L36 15.6858V20.3142H8.613L20.682 32.7277L17.5005 36L0 18L17.5005 -1.29372e-06L20.682 3.2723L8.613 15.6858Z' fill='%23B85042' fill-opacity='0.6'/%3E%3C/svg%3E%0A"); */
+
+/* :enabled
+background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.387 20.3142L0 20.3142V15.6858L27.387 15.6858L15.318 3.27231L18.4995 0L36 18L18.4995 36L15.318 32.7277L27.387 20.3142Z' fill='%23E7E8D1'/%3E%3C/svg%3E%0A"); */
+
+.slider-pagination {
+  display: none;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+.slider-pagination li {
+  margin: 0 10px;
+}
+
+.slider-pagination-item {
+  display: block;
+  width: 190px;
+  height: 45px;
+  font: inherit;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 2px solid #b85042;
+}
+
+.slider-pagination-item:disabled {
+  background-color: #b85042;
+}
+
+.slider-pagination--shown {
+  display: flex;
+}

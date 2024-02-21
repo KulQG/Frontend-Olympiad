@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Компонент «Слайдер»</title>
+</head>
+<body>
+  <div id="slider">
+    <div class="slider-containter">
+      <ul class="slider-items">
+        <li class="slider-item slider-item--current">
+          <img src="img/slide-1.jpg" alt="" width="600" height="380"/>
+        </li>
+        <li class="slider-item">
+          <img src="img/slide-2.jpg" alt="" width="600" height="380"/>
+        </li>
+        <li class="slider-item">
+          <img src="img/slide-3.jpg" alt="" width="600" height="380"/>
+        </li>
+      </ul>
+      <div class="slider-toggles">
+        <button disabled class="slider-toggle--prev" type="button">Назад</button>
+        <button class="slider-toggle--next" type="button">Вперёд</button>
+      </div>
+    </div>
+    <ul class="slider-pagination">
+      <li>
+        <button disabled class="slider-pagination-item" type="button">1</button>
+      </li>
+      <li>
+        <button class="slider-pagination-item" type="button">2</button>
+      </li>
+      <li>
+        <button class="slider-pagination-item" type="button">3</button>
+      </li>
+    </ul>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
