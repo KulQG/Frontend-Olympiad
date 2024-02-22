@@ -2,7 +2,7 @@
   const form = document.querySelector('form');
 
   form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Отменяем поведение по умолчанию для события отправки формы
+    event.preventDefault();
 
     const phone = form.querySelector('#phone');
 
@@ -40,7 +40,6 @@
     formValid(isValidGuests, adults);
     formValid(isValidGuests, children);
 
-    // Если есть хотя бы одно поле с классом field-error, форма не отправляется
     if (form.querySelector('.field-error')) {
       return;
     }
@@ -101,9 +100,6 @@
         case 'family': {
           return adults >= 2 && children >= 1;
         }
-        // default: {
-        //   return false;
-        // }
       }
     } else {
       return false;
